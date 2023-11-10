@@ -1,0 +1,2 @@
+- name: Setup dotfiles
+  ansible.builtin.command: "chezmoi init --apply https://github.com/joroovb/dotfiles.git"

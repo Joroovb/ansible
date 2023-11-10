@@ -1,0 +1,13 @@
+- name: Bootstrap local environment
+  hosts: localhost
+
+  vars_files:
+    - vars/packages.yml
+
+  tasks:
+  - ansible.builtin.import_tasks: tasks/pacman.yml
+    when: ansible_distribution == "Archlinux"
+      #  - ansible.builtin.import_tasks: tasks/rust.yml
+  - ansible.builtin.import_tasks: tasks/dotfiles.yml
+
+

@@ -1,0 +1,41 @@
+packages:
+  core:
+    - git
+  user:
+    - lazygit
+    - neovim
+    - bat
+    - exa
+    - tmux
+    - chezmoi
+    - ripgrep
+    - syncthing
+    - pinentry
+    - mpd
+    - jq
+    - go
+    - gnupg
+    - fzf
+  gui:
+    - alacritty
+    - firefox
+    - keepassxc
+  sway:
+    - sway
+    - swaybg
+    - waybar
+    - slurp
+    - grim
+    - udiskie
+    - wpa_supplicant
+    - wofi
+    - wl-clipboard
+    - pavucontrol
+    - light
+    - greetd
+    - greetd-tuigreet
+    - feh
+    - dmenu
+  programming:
+    - python
+    - python-pip

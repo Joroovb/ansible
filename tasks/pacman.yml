@@ -1,0 +1,37 @@
+  - name: Update pacman cache
+    become: yes
+    community.general.pacman:
+      update_cache: true
+
+  - name: Upgrade pacman packages
+    become: yes
+    community.general.pacman:
+      upgrade: yes
+
+  - name: Install core pacman packages
+    become: yes
+    community.general.pacman:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ packages.core }}"
+  
+  - name: Install user pacman packages
+    become: yes
+    community.general.pacman:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ packages.user }}"
+  
+  - name: Install Linux pacman packages
+    become: yes
+    community.general.pacman:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ packages.sway }}"
+
+  - name: Install gui pacman packages
+    become: yes
+    community.general.pacman:
+      name: "{{ item }}"
+      state: present
+    loop: "{{ packages.gui }}"
